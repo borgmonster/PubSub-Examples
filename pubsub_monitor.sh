@@ -26,7 +26,7 @@ set -o nounset
 set -o pipefail
 
 WORKDIR=$HOME/scripts
-export GOOGLE_APPLICATION_CREDENTIALS=$WORKDIR/log-pubsub-sa.json
+export GOOGLE_APPLICATION_CREDENTIALS=$WORKDIR/your_service_account_key_file.json
 cd $WORKDIR
 echo `date` ":start..."  >> subscription_counter.log
 # Add logic to check long running job and wait for it to finish
