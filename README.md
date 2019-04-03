@@ -22,3 +22,10 @@ TODO: add a chart
  - Create a cron job on the VM
 
 Alternatively, you can put these steps in VM startup scripts or create a container.
+
+- Create a log filter on Stackdriver logging:
+> resource.type="pubsub_subscription" AND resource.labels.project_id="your project id" AND jsonPayload.total_subscriptions>your threshold
+
+- Test the filter to make sure it captures the log entries emitted by the shell script.
+- Create a logbase metric from the filter defined above.
+- From Stackdriver Monitoring page, create a alert policy based on the metric defined above.
