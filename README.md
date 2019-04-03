@@ -1,0 +1,24 @@
+
+ ## PubSub Subscription Quota Monitoring
+ 
+ ## Table of Contents
+ <!-- TOC -->
+  [Introduction](#Introduction) 
+  [Architecture](#Architecture) 
+  [Instructions](#CodeHere)
+  <!-- TOC -->
+  
+
+## Introduction
+Google Cloud has a per project quota limit on number of subscriptions. This limit is somewhat hard limit. There are use cases where this limit can be reached and causes unwanted behavior of processes that are subscribing to topics. This article describes a simple way to monitor the total number of subscriptions within a project and send alerts once a threshold is reached.
+
+## Architecture
+TODO: add a chart
+
+## Instructions
+
+ - Create or use a service account with proper roles to run the usage extraction process on a VM
+ - Provision a small VM and install the scripts
+ - Create a cron job on the VM
+
+Alternatively, you can put these steps in VM startup scripts or create a container.
